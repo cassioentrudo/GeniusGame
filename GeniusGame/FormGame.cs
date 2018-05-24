@@ -6,45 +6,45 @@ namespace GeniusGame
 {
     public partial class FormGame : Form
     {
-        private ClassButton blueButton = null;
+        private ClassButton blue = null;
 
-        private ClassButton redButton = null;
+        private ClassButton red = null;
 
-        private ClassButton yellowButton = null;
+        private ClassButton yellow = null;
 
-        private ClassButton greenButton = null;
+        private ClassButton green = null;
 
         public FormGame()
         {
             InitializeComponent();
 
-            this.blueButton = new ClassButton(this.buttonBlue, Properties.Resources.blueButton, Properties.Resources.bluePressButton);
+            this.blue = new ClassButton(this.buttonBlue, Properties.Resources.blueButton, Properties.Resources.bluePressButton);
 
-            this.redButton = new ClassButton(this.buttonRed, Properties.Resources.redButton, Properties.Resources.redPressButton);
+            this.red = new ClassButton(this.buttonRed, Properties.Resources.redButton, Properties.Resources.redPressButton);
 
-            this.yellowButton = new ClassButton(this.buttonYellow, Properties.Resources.yellowButton, Properties.Resources.yellowPressButton);
+            this.yellow = new ClassButton(this.buttonYellow, Properties.Resources.yellowButton, Properties.Resources.yellowPressButton);
 
-            this.greenButton = new ClassButton(this.buttonGreen, Properties.Resources.greenButton, Properties.Resources.greenPressButton);
+            this.green = new ClassButton(this.buttonGreen, Properties.Resources.greenButton, Properties.Resources.greenPressButton);
     }
 
         private void buttonGreen_Click(object sender, EventArgs e)
         {
-            this.ExecuteButton(this.greenButton);
+            this.ExecuteButton(this.green);
         }
 
         private void buttonYellow_Click(object sender, EventArgs e)
         {
-            this.ExecuteButton(this.yellowButton);
+            this.ExecuteButton(this.yellow);
         }
 
         private void buttonBlue_Click(object sender, EventArgs e)
         {
-            this.ExecuteButton(this.blueButton);
+            this.ExecuteButton(this.blue);
         }
 
         private void buttonRed_Click(object sender, EventArgs e)
         {
-            this.ExecuteButton(this.redButton);
+            this.ExecuteButton(this.red);
         }
 
         public void ExecuteButton(ClassButton button)
