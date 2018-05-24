@@ -3,9 +3,9 @@ using System.Windows.Forms;
 
 namespace GeniusGame
 {
-    public class ClassButton
+    public class Botao
     {
-        public ClassButton(Button buttonForm, Image imageNormal, Image imagePress)
+        public Botao(Button buttonForm, Image imageNormal, Image imagePress)
         {
             this.imageNormal = imageNormal;
             this.imagePress = imagePress;

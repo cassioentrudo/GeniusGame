@@ -6,53 +6,53 @@ namespace GeniusGame
 {
     public partial class FormGame : Form
     {
-        private ClassButton blue = null;
+        private Botao blue = null;
 
-        private ClassButton red = null;
+        private Botao red = null;
 
-        private ClassButton yellow = null;
+        private Botao yellow = null;
 
-        private ClassButton green = null;
+        private Botao green = null;
 
         public FormGame()
         {
             InitializeComponent();
 
-            this.blue = new ClassButton(this.buttonBlue, Properties.Resources.blueButton, Properties.Resources.bluePressButton);
+            this.blue = new Botao(this.buttonBlue, Properties.Resources.blueButton, Properties.Resources.bluePressButton);
 
-            this.red = new ClassButton(this.buttonRed, Properties.Resources.redButton, Properties.Resources.redPressButton);
+            this.red = new Botao(this.buttonRed, Properties.Resources.redButton, Properties.Resources.redPressButton);
 
-            this.yellow = new ClassButton(this.buttonYellow, Properties.Resources.yellowButton, Properties.Resources.yellowPressButton);
+            this.yellow = new Botao(this.buttonYellow, Properties.Resources.yellowButton, Properties.Resources.yellowPressButton);
 
-            this.green = new ClassButton(this.buttonGreen, Properties.Resources.greenButton, Properties.Resources.greenPressButton);
+            this.green = new Botao(this.buttonGreen, Properties.Resources.greenButton, Properties.Resources.greenPressButton);
     }
 
         private void buttonGreen_Click(object sender, EventArgs e)
         {
-            this.ExecuteButton(this.green);
+            this.Play(this.green);
         }
 
         private void buttonYellow_Click(object sender, EventArgs e)
         {
-            this.ExecuteButton(this.yellow);
+            this.Play(this.yellow);
         }
 
         private void buttonBlue_Click(object sender, EventArgs e)
         {
-            this.ExecuteButton(this.blue);
+            this.Play(this.blue);
         }
 
         private void buttonRed_Click(object sender, EventArgs e)
         {
-            this.ExecuteButton(this.red);
+            this.Play(this.red);
         }
 
-        public void ExecuteButton(ClassButton button)
+        public void Play(Botao acionado)//Mudar de classe?
         {
-            button.ButtonForm.BackgroundImage = button.ImagePress;
+            acionado.ButtonForm.BackgroundImage = acionado.ImagePress;
             this.Refresh();
             Thread.Sleep(300);
-            button.ButtonForm.BackgroundImage = button.ImageNormal;
+            acionado.ButtonForm.BackgroundImage = acionado.ImageNormal;
             this.Refresh();
         }
     }
