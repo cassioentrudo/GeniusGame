@@ -1,0 +1,9 @@
+C:\Cassio\TCP\Trabalho\GeniusGame\GeniusGame\bin\Debug\GeniusGame.exe.config
+C:\Cassio\TCP\Trabalho\GeniusGame\GeniusGame\bin\Debug\GeniusGame.exe
+C:\Cassio\TCP\Trabalho\GeniusGame\GeniusGame\bin\Debug\GeniusGame.pdb
+C:\Cassio\TCP\Trabalho\GeniusGame\GeniusGame\obj\Debug\GeniusGame.FormGame.resources
+C:\Cassio\TCP\Trabalho\GeniusGame\GeniusGame\obj\Debug\GeniusGame.FormMain.resources
+C:\Cassio\TCP\Trabalho\GeniusGame\GeniusGame\obj\Debug\GeniusGame.Properties.Resources.resources
+C:\Cassio\TCP\Trabalho\GeniusGame\GeniusGame\obj\Debug\GeniusGame.csproj.GenerateResource.Cache
+C:\Cassio\TCP\Trabalho\GeniusGame\GeniusGame\obj\Debug\GeniusGame.exe
+C:\Cassio\TCP\Trabalho\GeniusGame\GeniusGame\obj\Debug\GeniusGame.pdb
