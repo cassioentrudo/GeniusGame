@@ -16,3 +16,14 @@ C:\Cassio\TCP\GeniusGame\GeniusGame\obj\Debug\GeniusGame.FormGame.resources
 C:\Cassio\TCP\GeniusGame\GeniusGame\obj\Debug\GeniusGame.FormMain.resources
 C:\Cassio\TCP\GeniusGame\GeniusGame\obj\Debug\GeniusGame.Properties.Resources.resources
 C:\Cassio\TCP\GeniusGame\GeniusGame\obj\Debug\GeniusGame.csproj.GenerateResource.Cache
+C:\Users\Felipe\Documents\GitHub\CLAS_T\GeniusGame\GeniusGame\obj\Debug\GeniusGame.csprojResolveAssemblyReference.cache
+C:\Users\Felipe\Documents\GitHub\CLAS_T\GeniusGame\GeniusGame\obj\Debug\GeniusGame.FormGame.resources
+C:\Users\Felipe\Documents\GitHub\CLAS_T\GeniusGame\GeniusGame\obj\Debug\GeniusGame.FormMain.resources
+C:\Users\Felipe\Documents\GitHub\CLAS_T\GeniusGame\GeniusGame\obj\Debug\GeniusGame.Properties.Resources.resources
+C:\Users\Felipe\Documents\GitHub\CLAS_T\GeniusGame\GeniusGame\obj\Debug\GeniusGame.csproj.GenerateResource.Cache
+C:\Users\Felipe\Documents\GitHub\CLAS_T\GeniusGame\GeniusGame\obj\Debug\GeniusGame.csproj.CoreCompileInputs.cache
+C:\Users\Felipe\Documents\GitHub\CLAS_T\GeniusGame\GeniusGame\obj\Debug\GeniusGame.exe
+C:\Users\Felipe\Documents\GitHub\CLAS_T\GeniusGame\GeniusGame\obj\Debug\GeniusGame.pdb
+C:\Users\Felipe\Documents\GitHub\CLAS_T\GeniusGame\GeniusGame\bin\Debug\GeniusGame.exe.config
+C:\Users\Felipe\Documents\GitHub\CLAS_T\GeniusGame\GeniusGame\bin\Debug\GeniusGame.exe
+C:\Users\Felipe\Documents\GitHub\CLAS_T\GeniusGame\GeniusGame\bin\Debug\GeniusGame.pdb

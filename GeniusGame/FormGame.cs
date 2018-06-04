@@ -47,7 +47,7 @@ namespace GeniusGame
             this.Play(this.red);
         }
 
-        public void Play(Botao acionado)//Mudar de classe?
+        public  void Play(Botao acionado)
         {
             acionado.ButtonForm.BackgroundImage = acionado.ImagePress;
             this.Refresh();

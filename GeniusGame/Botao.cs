@@ -7,10 +7,13 @@ namespace GeniusGame
     {
         public Botao(Button buttonForm, Image imageNormal, Image imagePress)
         {
+            this.buttonForm = buttonForm;
             this.imageNormal = imageNormal;
             this.imagePress = imagePress;
-            this.buttonForm = buttonForm;
+            
         }
+        
+ 
 
         private Image imageNormal = null;
 
@@ -18,6 +21,8 @@ namespace GeniusGame
 
         private Button buttonForm = null;
 
+
+     
 
         public Image ImageNormal
         {
