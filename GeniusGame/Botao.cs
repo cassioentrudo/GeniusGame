@@ -1,48 +1,46 @@
 ﻿using System.Drawing;
-using System.Windows.Forms;
 
 namespace GeniusGame
 {
     public class Botao
-    {
-        public Botao(Button buttonForm, Image imageNormal, Image imagePress)
+    {  
+      public Botao(Color idleColor, Color activeColor, Song song)
         {
-            this.buttonForm = buttonForm;
-            this.imageNormal = imageNormal;
-            this.imagePress = imagePress;
-            
-        }
-        
- 
-
-        private Image imageNormal = null;
-
-        private Image imagePress = null;
-
-        private Button buttonForm = null;
-
-
-     
-
-        public Image ImageNormal
-        {
-            get { return this.imageNormal; }
+            this.activeColor = activeColor;
+            this.idleColor = idleColor;            
         }
 
-        public Image ImagePress
+        /// <summary>
+        /// Cor do botão quando ele está pressionado
+        /// </summary>
+        private Color activeColor;
+
+        /// <summary>
+        /// Cor do botão quando ele está em seu estado normal
+        /// </summary>
+        private Color idleColor;
+
+        /// <summary>
+        /// Música que toca quando o botão é pressionado
+        /// </summary>
+        private Song song; 
+
+        public Color ActiveColor
         {
-            get
-            {
-                return this.imagePress;
-            }
+            get { return this.activeColor; }
+            set { this.activeColor = value; }
         }
 
-        public Button ButtonForm
+        public Color IdleColor
         {
-            get
-            {
-                return this.buttonForm;
-            }
+            get { return this.idleColor; }
+            set { this.idleColor = value; }
+        }
+
+        public Song Song
+        {
+            get { return this.song; }
+            set { this.song = value; }
         }
     }
 }

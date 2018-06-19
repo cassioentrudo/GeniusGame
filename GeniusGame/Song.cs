@@ -1,12 +1,15 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace GeniusGame
 {
-    class Song
+    public class Song
     {
+        string filePath = string.Empty;
+
+        public String FilePath
+        {
+            get { return this.filePath; }
+            set { this.filePath = value; }
+        }
     }
 }
