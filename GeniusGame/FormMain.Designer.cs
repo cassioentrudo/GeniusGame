@@ -33,6 +33,7 @@
             // 
             // buttonNewGame
             // 
+            this.buttonNewGame.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonNewGame.Location = new System.Drawing.Point(71, 29);
             this.buttonNewGame.Name = "buttonNewGame";
             this.buttonNewGame.Size = new System.Drawing.Size(336, 113);
@@ -44,7 +45,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(492, 344);
+            this.ClientSize = new System.Drawing.Size(492, 176);
             this.Controls.Add(this.buttonNewGame);
             this.Name = "FormMain";
             this.Text = "Form1";
