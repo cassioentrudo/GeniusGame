@@ -32,13 +32,9 @@
             this.buttonYellow = new System.Windows.Forms.Button();
             this.buttonGreen = new System.Windows.Forms.Button();
             this.buttonBlue = new System.Windows.Forms.Button();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.panelControls = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
-            this.buttonConfiguration = new System.Windows.Forms.Button();
-            this.panel1.SuspendLayout();
-            this.panelControls.SuspendLayout();
+            this.panelButtons = new System.Windows.Forms.Panel();
+            this.labelScore = new System.Windows.Forms.Label();
+            this.panelButtons.SuspendLayout();
             this.SuspendLayout();
             // 
             // buttonRed
@@ -91,77 +87,41 @@
             this.buttonBlue.UseVisualStyleBackColor = false;
             this.buttonBlue.Click += new System.EventHandler(this.buttonBlue_Click);
             // 
-            // panel1
+            // panelButtons
             // 
-            this.panel1.Controls.Add(this.buttonBlue);
-            this.panel1.Controls.Add(this.buttonRed);
-            this.panel1.Controls.Add(this.buttonGreen);
-            this.panel1.Controls.Add(this.buttonYellow);
-            this.panel1.Location = new System.Drawing.Point(39, 173);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(646, 628);
-            this.panel1.TabIndex = 5;
+            this.panelButtons.Controls.Add(this.labelScore);
+            this.panelButtons.Controls.Add(this.buttonBlue);
+            this.panelButtons.Controls.Add(this.buttonRed);
+            this.panelButtons.Controls.Add(this.buttonGreen);
+            this.panelButtons.Controls.Add(this.buttonYellow);
+            this.panelButtons.Location = new System.Drawing.Point(35, 26);
+            this.panelButtons.Name = "panelButtons";
+            this.panelButtons.Size = new System.Drawing.Size(646, 628);
+            this.panelButtons.TabIndex = 5;
             // 
-            // panelControls
+            // labelScore
             // 
-            this.panelControls.Controls.Add(this.button2);
-            this.panelControls.Controls.Add(this.buttonConfiguration);
-            this.panelControls.Location = new System.Drawing.Point(42, 27);
-            this.panelControls.Name = "panelControls";
-            this.panelControls.Size = new System.Drawing.Size(316, 129);
-            this.panelControls.TabIndex = 6;
-            // 
-            // label1
-            // 
-            this.label1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(364, 27);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(318, 129);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "0";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // button2
-            // 
-            this.button2.BackColor = System.Drawing.Color.Black;
-            this.button2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(0, 64);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(316, 64);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "button2";
-            this.button2.UseVisualStyleBackColor = false;
-            // 
-            // buttonConfiguration
-            // 
-            this.buttonConfiguration.BackColor = System.Drawing.Color.Black;
-            this.buttonConfiguration.Dock = System.Windows.Forms.DockStyle.Top;
-            this.buttonConfiguration.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonConfiguration.ForeColor = System.Drawing.Color.White;
-            this.buttonConfiguration.Location = new System.Drawing.Point(0, 0);
-            this.buttonConfiguration.Name = "buttonConfiguration";
-            this.buttonConfiguration.Size = new System.Drawing.Size(316, 64);
-            this.buttonConfiguration.TabIndex = 0;
-            this.buttonConfiguration.Text = "Configurações";
-            this.buttonConfiguration.UseVisualStyleBackColor = false;
+            this.labelScore.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.labelScore.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelScore.ForeColor = System.Drawing.Color.White;
+            this.labelScore.Location = new System.Drawing.Point(156, 245);
+            this.labelScore.Name = "labelScore";
+            this.labelScore.Size = new System.Drawing.Size(338, 129);
+            this.labelScore.TabIndex = 0;
+            this.labelScore.Text = "0";
+            this.labelScore.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // FormGame
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.ClientSize = new System.Drawing.Size(721, 748);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.panelControls);
-            this.Controls.Add(this.panel1);
+            this.ClientSize = new System.Drawing.Size(721, 678);
+            this.Controls.Add(this.panelButtons);
             this.Name = "FormGame";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Game";
-            this.panel1.ResumeLayout(false);
-            this.panelControls.ResumeLayout(false);
+            this.panelButtons.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -171,10 +131,7 @@
         private System.Windows.Forms.Button buttonYellow;
         private System.Windows.Forms.Button buttonGreen;
         private System.Windows.Forms.Button buttonBlue;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Panel panelControls;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button buttonConfiguration;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Panel panelButtons;
+        private System.Windows.Forms.Label labelScore;
     }
 }

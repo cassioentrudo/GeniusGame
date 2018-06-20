@@ -8,8 +8,6 @@ namespace GeniusGame
 {
     public class Sequencia
     {
-      
-
         private static Botao GetRandBotao(List<Botao> botoes)
         {
 
@@ -23,7 +21,6 @@ namespace GeniusGame
 
             return botaoSorteado;
         }
-
 
         public static void IncSequencia(List<Botao> sequenciaBotoes, List<Botao> botoes)
         {

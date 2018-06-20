@@ -1,0 +1,17 @@
+C:\Cassio\TCP\GeniusGame\GeniusGame\bin\x64\Debug\GeniusGame.exe.config
+C:\Cassio\TCP\GeniusGame\GeniusGame\obj\x64\Debug\Interop.MediaPlayer.dll
+C:\Cassio\TCP\GeniusGame\GeniusGame\obj\x64\Debug\Interop.WMPLib.dll
+C:\Cassio\TCP\GeniusGame\GeniusGame\obj\x64\Debug\GeniusGame.csproj.ResolveComReference.cache
+C:\Cassio\TCP\GeniusGame\GeniusGame\obj\x64\Debug\GeniusGame.FormGame.resources
+C:\Cassio\TCP\GeniusGame\GeniusGame\obj\x64\Debug\GeniusGame.FormMain.resources
+C:\Cassio\TCP\GeniusGame\GeniusGame\obj\x64\Debug\GeniusGame.csproj.GenerateResource.Cache
+C:\Cassio\TCP\GeniusGame\GeniusGame\obj\x64\Debug\GeniusGame.Properties.Resources.resources
+C:\Cassio\TCP\GeniusGame\GeniusGame\bin\x64\Debug\GeniusGame.exe
+C:\Cassio\TCP\GeniusGame\GeniusGame\bin\x64\Debug\GeniusGame.pdb
+C:\Cassio\TCP\GeniusGame\GeniusGame\bin\x64\Debug\nunit.framework.dll
+C:\Cassio\TCP\GeniusGame\GeniusGame\bin\x64\Debug\nunit.framework.pdb
+C:\Cassio\TCP\GeniusGame\GeniusGame\bin\x64\Debug\nunit.framework.xml
+C:\Cassio\TCP\GeniusGame\GeniusGame\obj\x64\Debug\GeniusGame.exe
+C:\Cassio\TCP\GeniusGame\GeniusGame\obj\x64\Debug\GeniusGame.pdb
+C:\Cassio\TCP\GeniusGame\GeniusGame\obj\x64\Debug\GeniusGame.Forms.FormScoreBoard.resources
+C:\Cassio\TCP\GeniusGame\GeniusGame\obj\x64\Debug\GeniusGame.csprojResolveAssemblyReference.cache

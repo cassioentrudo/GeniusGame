@@ -1,14 +1,20 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace GeniusGame
+﻿namespace GeniusGame
 {
     public class Player
     {
         string name = string.Empty;
-        int lastPontuation = 0;
+        int score = 0;
+
+        public string Nome
+        {
+            get { return this.name; }
+            set { this.name = value; }
+        }
+
+        public int Score
+        {
+            get { return this.score; }
+            set { this.score = value; }
+        }
     }
 }

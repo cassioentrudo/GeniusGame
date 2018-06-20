@@ -16,10 +16,11 @@ namespace GeniusGame
         {
             InitializeComponent();
 
-            this.blue = new Botao(Color.Green, Color.YellowGreen);
-            this.red = new Botao(Color.Red, Color.OrangeRed);
-            this.yellow = new Botao(Color.Blue, Color.BlueViolet);
-            this.green = new Botao(Color.Green, Color.GreenYellow);
+            this.blue = new Botao();
+            this.blue.Song.FilePath = "C:\\Cassio\\TCP\\Trabalho\\Drake - Hotline Bling.mp3";
+            //this.red = new Botao(Color.Red, Color.OrangeRed);
+            //this.yellow = new Botao(Color.Blue, Color.BlueViolet);
+            //this.green = new Botao(Color.Green, Color.GreenYellow);
     }
 
         private void buttonGreen_Click(object sender, EventArgs e)
@@ -34,7 +35,8 @@ namespace GeniusGame
 
         private void buttonBlue_Click(object sender, EventArgs e)
         {
-            this.Play(this.buttonBlue, this.blue);
+            this.blue.Song.Play();
+            //.Play(this.buttonBlue, this.blue);
         }
 
         private void buttonRed_Click(object sender, EventArgs e)
@@ -44,11 +46,11 @@ namespace GeniusGame
 
         public  void Play(Button button, Botao acionado)
         {
-            button.ForeColor = acionado.ActiveColor;
-            this.Refresh();
-            Thread.Sleep(500);
-            button.ForeColor = acionado.IdleColor;
-            this.Refresh();
+            //button.ForeColor = acionado.ActiveColor;
+            //this.Refresh();
+            //Thread.Sleep(500);
+            //button.ForeColor = acionado.IdleColor;
+            //this.Refresh();
         }
     }
 }

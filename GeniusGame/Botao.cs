@@ -3,11 +3,10 @@
 namespace GeniusGame
 {
     public class Botao
-    {  
-      public Botao(Color idleColor, Color activeColor, Song song)
+    {
+        public Botao()
         {
-            this.activeColor = activeColor;
-            this.idleColor = idleColor;            
+            this.song = new Song();
         }
 
         /// <summary>
