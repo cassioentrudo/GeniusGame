@@ -17,5 +17,11 @@ namespace GeniusGame
                 //instance.Play(botao);
             }
         }
+
+        public static bool TestaCorreto(List<Botao> sequencia, int posicao, Botao acionado)
+        {
+
+            return sequencia.ElementAt(posicao) == acionado;
+        }
     }
 }
