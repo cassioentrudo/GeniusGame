@@ -106,7 +106,7 @@
             this.panelButtonsGame.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelButtonsGame.Location = new System.Drawing.Point(0, 0);
             this.panelButtonsGame.Name = "panelButtonsGame";
-            this.panelButtonsGame.Size = new System.Drawing.Size(521, 511);
+            this.panelButtonsGame.Size = new System.Drawing.Size(521, 495);
             this.panelButtonsGame.TabIndex = 5;
             // 
             // labelScore
@@ -128,7 +128,7 @@
             this.panelButtonsControl.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelButtonsControl.Location = new System.Drawing.Point(0, 0);
             this.panelButtonsControl.Name = "panelButtonsControl";
-            this.panelButtonsControl.Size = new System.Drawing.Size(521, 260);
+            this.panelButtonsControl.Size = new System.Drawing.Size(521, 352);
             this.panelButtonsControl.TabIndex = 8;
             // 
             // buttonStart
@@ -137,7 +137,7 @@
             this.buttonStart.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonStart.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonStart.ForeColor = System.Drawing.Color.White;
-            this.buttonStart.Location = new System.Drawing.Point(0, 34);
+            this.buttonStart.Location = new System.Drawing.Point(0, 126);
             this.buttonStart.Name = "buttonStart";
             this.buttonStart.Size = new System.Drawing.Size(521, 113);
             this.buttonStart.TabIndex = 6;
@@ -151,7 +151,7 @@
             this.buttonConfiguration.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonConfiguration.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonConfiguration.ForeColor = System.Drawing.Color.White;
-            this.buttonConfiguration.Location = new System.Drawing.Point(0, 147);
+            this.buttonConfiguration.Location = new System.Drawing.Point(0, 239);
             this.buttonConfiguration.Name = "buttonConfiguration";
             this.buttonConfiguration.Size = new System.Drawing.Size(521, 113);
             this.buttonConfiguration.TabIndex = 7;
@@ -173,8 +173,8 @@
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.Controls.Add(this.panelButtonsControl);
-            this.splitContainer1.Size = new System.Drawing.Size(521, 775);
-            this.splitContainer1.SplitterDistance = 511;
+            this.splitContainer1.Size = new System.Drawing.Size(521, 851);
+            this.splitContainer1.SplitterDistance = 495;
             this.splitContainer1.TabIndex = 6;
             // 
             // FormGame
@@ -182,7 +182,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.ClientSize = new System.Drawing.Size(521, 775);
+            this.ClientSize = new System.Drawing.Size(521, 851);
             this.Controls.Add(this.splitContainer1);
             this.Name = "FormGame";
             this.ShowIcon = false;

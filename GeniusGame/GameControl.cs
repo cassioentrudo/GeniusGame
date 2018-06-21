@@ -57,25 +57,21 @@ namespace GeniusGame
             this.formGame = formGame;
 
             this.blue = new Botao();
-            this.blue.SongFilePath = Properties.Settings.Default.BlueButtonSong;
             this.blue.IdleColor = Color.Blue;
             this.blue.ActiveColor = Color.LightBlue;
             this.blue.InstanceName = "blue";
 
             this.red = new Botao();
-            this.red.SongFilePath = Properties.Settings.Default.RedButtonSong;
             this.red.IdleColor = Color.Red;
             this.red.ActiveColor = Color.LightSalmon;
             this.red.InstanceName = "red";
 
             this.yellow = new Botao();
-            this.yellow.SongFilePath = Properties.Settings.Default.YellowButtonSong;
             this.yellow.IdleColor = Color.Yellow;
             this.yellow.ActiveColor = Color.LightYellow;
             this.yellow.InstanceName = "yellow";
 
             this.green = new Botao();
-            this.green.SongFilePath = Properties.Settings.Default.GreenButtonSong;
             this.green.IdleColor = Color.Green;
             this.green.ActiveColor = Color.LightGreen;
             this.green.InstanceName = "green";
@@ -84,7 +80,14 @@ namespace GeniusGame
             this.botoes.Add(this.red);
             this.botoes.Add(this.yellow);
             this.botoes.Add(this.green);
+        }
 
+        public void Prepare(string blueSongPath, string redSongPath, string greenSongPath, string yellowSongPath)
+        {
+            this.blue.SongFilePath = blueSongPath;
+            this.red.SongFilePath = redSongPath;
+            this.green.SongFilePath = greenSongPath;
+            this.yellow.SongFilePath = yellowSongPath;
         }
 
         public void Start()
@@ -102,9 +105,9 @@ namespace GeniusGame
 
         private Botao GetRandBotao()
         {
-            Random rand = new Random();
+            Random rand = new Random(((int)DateTime.Now.Ticks & 0x0000FFFF));
 
-            return this.botoes.ElementAt(rand.Next(0, botoes.Count - 1));
+            return this.botoes.ElementAt(rand.Next(0, botoes.Count));
         }
 
         public void CheckSequence(Botao button)

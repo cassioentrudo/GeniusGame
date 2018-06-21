@@ -7,6 +7,8 @@ namespace GeniusGame
 {
     public partial class FormGame : Form
     {
+        private FormConfiguration formConfig = null;
+
         private GameControl gameControl = null;
 
         private Song song = null;
@@ -18,6 +20,7 @@ namespace GeniusGame
             InitializeComponent();
 
             this.gameControl = new GameControl(this);
+            this.formConfig = new FormConfiguration();
             this.song = new Song();
 
             this.StartFormObjects();
@@ -89,6 +92,8 @@ namespace GeniusGame
                         ExecuteButton(this.buttonRed, button, interval);
                         break;
                 }
+
+                Thread.Sleep(500);
             }
 
             //Terminou de exibir a sequência. Habilita botões pro usuário repetir..
@@ -97,10 +102,10 @@ namespace GeniusGame
 
         private void ExecuteButton(Button FormButton, Botao button, int time)
         {
-            this.song.Play(button.SongFilePath);
             FormButton.BackColor = button.ActiveColor;
+            this.song.Play(button.SongFilePath);            
             this.Refresh();
-            Thread.Sleep(time);
+            Thread.Sleep(interval);
             this.song.Stop();
             FormButton.BackColor = button.IdleColor;
             this.Refresh();
@@ -130,13 +135,28 @@ namespace GeniusGame
 
         private void buttonStart_Click(object sender, EventArgs e)
         {
+            string blueSongPath = this.formConfig.BlueButtonSongPath;
+            string redSongPath = this.formConfig.RedButtonSongPath;
+            string greenSongPath = this.formConfig.GreenButtonSongPath;
+            string yellowSongPath = this.formConfig.YellowButtonSongPath;
+
+            this.gameControl.Prepare(blueSongPath, redSongPath, greenSongPath, yellowSongPath);
             this.gameControl.Start();
         }
 
         private void buttonConfiguration_Click(object sender, EventArgs e)
         {
-            FormConfiguration formConfig = new FormConfiguration();
-            formConfig.ShowDialog();
+            DialogResult result =  this.formConfig.ShowDialog();
+
+            if (result == DialogResult.OK)
+            {
+                
+            }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.song.Mute(false);
         }
     }
 }

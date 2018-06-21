@@ -28,40 +28,30 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.labelVol = new System.Windows.Forms.Label();
             this.labelSongBlue = new System.Windows.Forms.Label();
             this.labelSongGreen = new System.Windows.Forms.Label();
             this.labelSongYellow = new System.Windows.Forms.Label();
             this.labelSongRed = new System.Windows.Forms.Label();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
+            this.textBoxBluePathSong = new System.Windows.Forms.TextBox();
+            this.textBoxYellowPathSong = new System.Windows.Forms.TextBox();
+            this.textBoxRedPathSong = new System.Windows.Forms.TextBox();
+            this.textBoxGreenPathSong = new System.Windows.Forms.TextBox();
+            this.buttonFindBlue = new System.Windows.Forms.Button();
+            this.buttonFindYellow = new System.Windows.Forms.Button();
+            this.buttonFindGreen = new System.Windows.Forms.Button();
+            this.buttonFindRed = new System.Windows.Forms.Button();
+            this.checkBoxMute = new System.Windows.Forms.CheckBox();
+            this.buttonOk = new System.Windows.Forms.Button();
+            this.folderBrowserDialogSongPath = new System.Windows.Forms.FolderBrowserDialog();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.SuspendLayout();
-            // 
-            // labelVol
-            // 
-            this.labelVol.AutoSize = true;
-            this.labelVol.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelVol.ForeColor = System.Drawing.Color.White;
-            this.labelVol.Location = new System.Drawing.Point(22, 34);
-            this.labelVol.Name = "labelVol";
-            this.labelVol.Size = new System.Drawing.Size(102, 25);
-            this.labelVol.TabIndex = 0;
-            this.labelVol.Text = "Volume %";
             // 
             // labelSongBlue
             // 
             this.labelSongBlue.AutoSize = true;
             this.labelSongBlue.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelSongBlue.ForeColor = System.Drawing.Color.White;
-            this.labelSongBlue.Location = new System.Drawing.Point(22, 76);
+            this.labelSongBlue.Location = new System.Drawing.Point(21, 35);
             this.labelSongBlue.Name = "labelSongBlue";
             this.labelSongBlue.Size = new System.Drawing.Size(151, 25);
             this.labelSongBlue.TabIndex = 1;
@@ -72,7 +62,7 @@
             this.labelSongGreen.AutoSize = true;
             this.labelSongGreen.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelSongGreen.ForeColor = System.Drawing.Color.White;
-            this.labelSongGreen.Location = new System.Drawing.Point(22, 225);
+            this.labelSongGreen.Location = new System.Drawing.Point(21, 184);
             this.labelSongGreen.Name = "labelSongGreen";
             this.labelSongGreen.Size = new System.Drawing.Size(165, 25);
             this.labelSongGreen.TabIndex = 2;
@@ -83,7 +73,7 @@
             this.labelSongYellow.AutoSize = true;
             this.labelSongYellow.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelSongYellow.ForeColor = System.Drawing.Color.White;
-            this.labelSongYellow.Location = new System.Drawing.Point(22, 127);
+            this.labelSongYellow.Location = new System.Drawing.Point(21, 86);
             this.labelSongYellow.Name = "labelSongYellow";
             this.labelSongYellow.Size = new System.Drawing.Size(185, 25);
             this.labelSongYellow.TabIndex = 2;
@@ -94,131 +84,159 @@
             this.labelSongRed.AutoSize = true;
             this.labelSongRed.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelSongRed.ForeColor = System.Drawing.Color.White;
-            this.labelSongRed.Location = new System.Drawing.Point(22, 176);
+            this.labelSongRed.Location = new System.Drawing.Point(21, 135);
             this.labelSongRed.Name = "labelSongRed";
             this.labelSongRed.Size = new System.Drawing.Size(165, 25);
             this.labelSongRed.TabIndex = 3;
             this.labelSongRed.Text = "Com Tecla Verm.";
             // 
-            // numericUpDown1
+            // textBoxBluePathSong
             // 
-            this.numericUpDown1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numericUpDown1.Location = new System.Drawing.Point(225, 29);
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(120, 30);
-            this.numericUpDown1.TabIndex = 4;
+            this.textBoxBluePathSong.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxBluePathSong.Location = new System.Drawing.Point(224, 35);
+            this.textBoxBluePathSong.Name = "textBoxBluePathSong";
+            this.textBoxBluePathSong.Size = new System.Drawing.Size(931, 30);
+            this.textBoxBluePathSong.TabIndex = 5;
             // 
-            // textBox1
+            // textBoxYellowPathSong
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(225, 76);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(549, 30);
-            this.textBox1.TabIndex = 5;
+            this.textBoxYellowPathSong.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxYellowPathSong.Location = new System.Drawing.Point(224, 81);
+            this.textBoxYellowPathSong.Name = "textBoxYellowPathSong";
+            this.textBoxYellowPathSong.Size = new System.Drawing.Size(931, 30);
+            this.textBoxYellowPathSong.TabIndex = 5;
             // 
-            // textBox2
+            // textBoxRedPathSong
             // 
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(225, 122);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(549, 30);
-            this.textBox2.TabIndex = 5;
+            this.textBoxRedPathSong.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxRedPathSong.Location = new System.Drawing.Point(224, 130);
+            this.textBoxRedPathSong.Name = "textBoxRedPathSong";
+            this.textBoxRedPathSong.Size = new System.Drawing.Size(931, 30);
+            this.textBoxRedPathSong.TabIndex = 5;
             // 
-            // textBox3
+            // textBoxGreenPathSong
             // 
-            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(225, 171);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(549, 30);
-            this.textBox3.TabIndex = 5;
+            this.textBoxGreenPathSong.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxGreenPathSong.Location = new System.Drawing.Point(224, 177);
+            this.textBoxGreenPathSong.Name = "textBoxGreenPathSong";
+            this.textBoxGreenPathSong.Size = new System.Drawing.Size(931, 30);
+            this.textBoxGreenPathSong.TabIndex = 5;
             // 
-            // textBox4
+            // buttonFindBlue
             // 
-            this.textBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox4.Location = new System.Drawing.Point(225, 220);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(549, 30);
-            this.textBox4.TabIndex = 5;
+            this.buttonFindBlue.Location = new System.Drawing.Point(1161, 35);
+            this.buttonFindBlue.Name = "buttonFindBlue";
+            this.buttonFindBlue.Size = new System.Drawing.Size(34, 32);
+            this.buttonFindBlue.TabIndex = 6;
+            this.buttonFindBlue.Text = "...";
+            this.buttonFindBlue.UseVisualStyleBackColor = true;
+            this.buttonFindBlue.Click += new System.EventHandler(this.buttonFindBlue_Click);
             // 
-            // button1
+            // buttonFindYellow
             // 
-            this.button1.Location = new System.Drawing.Point(780, 76);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(34, 30);
-            this.button1.TabIndex = 6;
-            this.button1.Text = "...";
-            this.button1.UseVisualStyleBackColor = true;
+            this.buttonFindYellow.Location = new System.Drawing.Point(1161, 81);
+            this.buttonFindYellow.Name = "buttonFindYellow";
+            this.buttonFindYellow.Size = new System.Drawing.Size(34, 30);
+            this.buttonFindYellow.TabIndex = 6;
+            this.buttonFindYellow.Text = "...";
+            this.buttonFindYellow.UseVisualStyleBackColor = true;
+            this.buttonFindYellow.Click += new System.EventHandler(this.buttonFindYellow_Click);
             // 
-            // button2
+            // buttonFindGreen
             // 
-            this.button2.Location = new System.Drawing.Point(780, 122);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(34, 30);
-            this.button2.TabIndex = 6;
-            this.button2.Text = "...";
-            this.button2.UseVisualStyleBackColor = true;
+            this.buttonFindGreen.Location = new System.Drawing.Point(1161, 177);
+            this.buttonFindGreen.Name = "buttonFindGreen";
+            this.buttonFindGreen.Size = new System.Drawing.Size(34, 32);
+            this.buttonFindGreen.TabIndex = 7;
+            this.buttonFindGreen.Text = "...";
+            this.buttonFindGreen.UseVisualStyleBackColor = true;
+            this.buttonFindGreen.Click += new System.EventHandler(this.buttonFindGreen_Click);
             // 
-            // button3
+            // buttonFindRed
             // 
-            this.button3.Location = new System.Drawing.Point(780, 220);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(34, 30);
-            this.button3.TabIndex = 7;
-            this.button3.Text = "...";
-            this.button3.UseVisualStyleBackColor = true;
+            this.buttonFindRed.Location = new System.Drawing.Point(1161, 128);
+            this.buttonFindRed.Name = "buttonFindRed";
+            this.buttonFindRed.Size = new System.Drawing.Size(34, 32);
+            this.buttonFindRed.TabIndex = 8;
+            this.buttonFindRed.Text = "...";
+            this.buttonFindRed.UseVisualStyleBackColor = true;
+            this.buttonFindRed.Click += new System.EventHandler(this.buttonFindRed_Click);
             // 
-            // button4
+            // checkBoxMute
             // 
-            this.button4.Location = new System.Drawing.Point(780, 173);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(34, 30);
-            this.button4.TabIndex = 8;
-            this.button4.Text = "...";
-            this.button4.UseVisualStyleBackColor = true;
+            this.checkBoxMute.AutoSize = true;
+            this.checkBoxMute.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBoxMute.ForeColor = System.Drawing.Color.White;
+            this.checkBoxMute.Location = new System.Drawing.Point(26, 244);
+            this.checkBoxMute.Name = "checkBoxMute";
+            this.checkBoxMute.Size = new System.Drawing.Size(82, 29);
+            this.checkBoxMute.TabIndex = 9;
+            this.checkBoxMute.Text = "Mute";
+            this.checkBoxMute.UseVisualStyleBackColor = true;
+            // 
+            // buttonOk
+            // 
+            this.buttonOk.DialogResult = System.Windows.Forms.DialogResult.OK;
+            this.buttonOk.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.buttonOk.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonOk.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonOk.ForeColor = System.Drawing.Color.White;
+            this.buttonOk.Location = new System.Drawing.Point(0, 296);
+            this.buttonOk.Name = "buttonOk";
+            this.buttonOk.Size = new System.Drawing.Size(1251, 113);
+            this.buttonOk.TabIndex = 10;
+            this.buttonOk.Text = "Aplicar";
+            this.buttonOk.UseVisualStyleBackColor = true;
+            this.buttonOk.Click += new System.EventHandler(this.buttonOk_Click);
+            // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.FileName = "openFileDialog1";
             // 
             // FormConfiguration
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
-            this.ClientSize = new System.Drawing.Size(825, 285);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.numericUpDown1);
+            this.ClientSize = new System.Drawing.Size(1251, 409);
+            this.Controls.Add(this.buttonOk);
+            this.Controls.Add(this.checkBoxMute);
+            this.Controls.Add(this.buttonFindRed);
+            this.Controls.Add(this.buttonFindGreen);
+            this.Controls.Add(this.buttonFindYellow);
+            this.Controls.Add(this.buttonFindBlue);
+            this.Controls.Add(this.textBoxGreenPathSong);
+            this.Controls.Add(this.textBoxRedPathSong);
+            this.Controls.Add(this.textBoxYellowPathSong);
+            this.Controls.Add(this.textBoxBluePathSong);
             this.Controls.Add(this.labelSongRed);
             this.Controls.Add(this.labelSongYellow);
             this.Controls.Add(this.labelSongGreen);
             this.Controls.Add(this.labelSongBlue);
-            this.Controls.Add(this.labelVol);
             this.Name = "FormConfiguration";
             this.ShowIcon = false;
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
+            this.Shown += new System.EventHandler(this.FormConfiguration_Shown);
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Label labelVol;
         private System.Windows.Forms.Label labelSongBlue;
         private System.Windows.Forms.Label labelSongGreen;
         private System.Windows.Forms.Label labelSongYellow;
         private System.Windows.Forms.Label labelSongRed;
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.TextBox textBoxBluePathSong;
+        private System.Windows.Forms.TextBox textBoxYellowPathSong;
+        private System.Windows.Forms.TextBox textBoxRedPathSong;
+        private System.Windows.Forms.TextBox textBoxGreenPathSong;
+        private System.Windows.Forms.Button buttonFindBlue;
+        private System.Windows.Forms.Button buttonFindYellow;
+        private System.Windows.Forms.Button buttonFindGreen;
+        private System.Windows.Forms.Button buttonFindRed;
+        private System.Windows.Forms.CheckBox checkBoxMute;
+        private System.Windows.Forms.Button buttonOk;
+        private System.Windows.Forms.FolderBrowserDialog folderBrowserDialogSongPath;
+        private System.Windows.Forms.OpenFileDialog openFileDialog1;
     }
 }

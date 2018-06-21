@@ -2,12 +2,10 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace GeniusGame
 {
-    class ScoreBoard
+    public class ScoreBoard
     {
         private static string BoardPath = "..\\..\\..\\ScoreBoard\\data\\ScoreBoard.txt";
 
@@ -21,7 +19,6 @@ namespace GeniusGame
                 for (int i = 0; i < 10; i++)
                     escritor.WriteLine(newBoard.ElementAt(i).Nome + " " + newBoard.ElementAt(i).Score);
             }
-
         }
 
         private static List<Player> UpdateBoardList(Player player)
@@ -36,7 +33,6 @@ namespace GeniusGame
 
         private static bool TestaScoreSuficiente(int scoreFeito)
         {
-
             return (GetScorePosicaoN(10) < scoreFeito);
         }
 
@@ -44,7 +40,6 @@ namespace GeniusGame
         {
             List<Player> board = GetScoreBoard();
             return board.ElementAt(n - 1).Score;
-
         }
 
         private static List<Player> GetScoreBoard()
@@ -58,14 +53,12 @@ namespace GeniusGame
 
         private static List<Player> LeBoard()
         {
-
             List<Player> board = new List<Player>();
             using (Stream arquivo = File.Open(BoardPath, FileMode.Open))
             using (StreamReader leitor = new StreamReader(arquivo))
             {
                 for (int i = 0; i < 10; i++)
                 {
-
                     string linha = leitor.ReadLine();
                     Player player = new Player
                     {
@@ -73,7 +66,6 @@ namespace GeniusGame
                         Score = Convert.ToInt32(linha.Split(' ')[1])
                     };
                     board.Add(player);
-
                 }
             }
 
@@ -92,4 +84,3 @@ namespace GeniusGame
         }
     }
 }
-
