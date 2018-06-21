@@ -1,4 +1,6 @@
 ﻿using System.Drawing;
+using System.Windows.Forms;
+using System.Threading;
 
 namespace GeniusGame
 {
@@ -8,6 +10,8 @@ namespace GeniusGame
         {
             this.song = new Song();
         }
+
+        #region Variáveis internas da classe
 
         /// <summary>
         /// Cor do botão quando ele está pressionado
@@ -22,7 +26,20 @@ namespace GeniusGame
         /// <summary>
         /// Música que toca quando o botão é pressionado
         /// </summary>
-        private Song song; 
+        private Song song;        
+        /// <summary>
+        /// Path contendo o arquivo .mp3
+        /// </summary>
+        private string songFilePath;
+
+        /// <summary>
+        /// Nome da instância desse objeto
+        /// </summary>
+        private string instanceName;
+
+        #endregion
+
+        #region Propriedades
 
         public Color ActiveColor
         {
@@ -36,10 +53,29 @@ namespace GeniusGame
             set { this.idleColor = value; }
         }
 
-        public Song Song
+        public string SongFilePath
         {
-            get { return this.song; }
-            set { this.song = value; }
+            get { return this.songFilePath; }
+            set { this.songFilePath = value; }
+        }
+
+        public string InstanceName
+        {
+            get { return this.instanceName; }
+            set { this.instanceName = value; }
+        }
+
+        #endregion
+
+        public void Play()
+        {
+            this.song.FilePath = this.songFilePath;
+            this.song.Play();
+        }
+
+        public void Stop()
+        {
+            this.song.Stop();
         }
     }
 }

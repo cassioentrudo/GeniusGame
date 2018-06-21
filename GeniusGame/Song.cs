@@ -29,5 +29,10 @@ namespace GeniusGame
             this.wplayer.URL = this.filePath;
             this.wplayer.controls.play();
         }
+
+        public void Stop()
+        {
+            this.wplayer.controls.stop();
+        }
     }
 }

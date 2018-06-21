@@ -8,22 +8,55 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace GeniusGame.Properties
-{
-
-
+namespace GeniusGame.Properties {
+    
+    
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "11.0.0.0")]
-    internal sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase
-    {
-
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "14.0.0.0")]
+    internal sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase {
+        
         private static Settings defaultInstance = ((Settings)(global::System.Configuration.ApplicationSettingsBase.Synchronized(new Settings())));
-
-        public static Settings Default
-        {
-            get
-            {
+        
+        public static Settings Default {
+            get {
                 return defaultInstance;
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("C:\\Cassio\\TCP\\GeniusGame\\Songs\\Cow Mooing-SoundBible.com-1530217877.mp3")]
+        public string BlueButtonSong {
+            get {
+                return ((string)(this["BlueButtonSong"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("C:\\Cassio\\TCP\\GeniusGame\\Songs\\Elephant Calls-SoundBible.com-480825513.mp3")]
+        public string RedButtonSong {
+            get {
+                return ((string)(this["RedButtonSong"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("C:\\Cassio\\TCP\\GeniusGame\\Songs\\Monkeys Monkeying Around-SoundBible.com-1738007729" +
+            ".mp3")]
+        public string YellowButtonSong {
+            get {
+                return ((string)(this["YellowButtonSong"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("C:\\Cassio\\TCP\\GeniusGame\\Songs\\Rooster-SoundBible.com-1114473528.mp3")]
+        public string GreenButtonSong {
+            get {
+                return ((string)(this["GreenButtonSong"]));
             }
         }
     }

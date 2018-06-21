@@ -1,5 +1,5 @@
 ﻿using System;
-using System.Drawing;
+using System.Collections.Generic;
 using System.Threading;
 using System.Windows.Forms;
 
@@ -7,50 +7,139 @@ namespace GeniusGame
 {
     public partial class FormGame : Form
     {
-        private Botao blue = null;
-        private Botao red = null;
-        private Botao yellow = null;
-        private Botao green = null;
+        private GameControl gameControl = null;
+
+        private const int interval = 1000;
 
         public FormGame()
         {
             InitializeComponent();
 
-            this.blue = new Botao();
-            this.blue.Song.FilePath = "C:\\Cassio\\TCP\\Trabalho\\Drake - Hotline Bling.mp3";
-            //this.red = new Botao(Color.Red, Color.OrangeRed);
-            //this.yellow = new Botao(Color.Blue, Color.BlueViolet);
-            //this.green = new Botao(Color.Green, Color.GreenYellow);
-    }
+            this.gameControl = new GameControl(this);
+
+            this.StartFormObjects();
+        }
+
+        /// <summary>
+        /// Apenas inicializa os botões na tela com as cores de idle de cada objeto botao
+        /// </summary>
+        private void StartFormObjects()
+        {
+            this.buttonBlue.BackColor = this.gameControl.Blue.IdleColor;
+            this.buttonRed.BackColor = this.gameControl.Red.IdleColor;
+            this.buttonYellow.BackColor = this.gameControl.Yellow.IdleColor;
+            this.buttonGreen.BackColor = this.gameControl.Green.IdleColor;
+        }
 
         private void buttonGreen_Click(object sender, EventArgs e)
         {
-            this.Play(this.buttonGreen, this.green);
+            this.gameControl.Green.Play();
+            this.gameControl.CheckSequence(this.gameControl.Green);
         }
 
         private void buttonYellow_Click(object sender, EventArgs e)
         {
-            this.Play(this.buttonYellow, this.yellow);
+            this.gameControl.Yellow.Play();
+            this.gameControl.CheckSequence(this.gameControl.Yellow);
         }
 
         private void buttonBlue_Click(object sender, EventArgs e)
         {
-            this.blue.Song.Play();
-            //.Play(this.buttonBlue, this.blue);
+            this.gameControl.Blue.Play();
+            this.gameControl.CheckSequence(this.gameControl.Blue);
         }
 
         private void buttonRed_Click(object sender, EventArgs e)
         {
-            this.Play(this.buttonRed, this.red);
+            this.gameControl.Red.Play();
+            this.gameControl.CheckSequence(this.gameControl.Red);
         }
 
-        public  void Play(Button button, Botao acionado)
+        public void UpdateScore()
         {
-            //button.ForeColor = acionado.ActiveColor;
-            //this.Refresh();
-            //Thread.Sleep(500);
-            //button.ForeColor = acionado.IdleColor;
-            //this.Refresh();
+            this.labelScore.Text = this.gameControl.Score.ToString();
+        }
+
+        public void PlaySequence(List<Botao> buttons)
+        {   
+            //Desabilita os botões. Está mostrando a sequência pro jogador
+            this.DisableFormButtons();
+
+            foreach (var button in buttons)
+            {
+                button.Play();
+
+                switch (button.InstanceName)
+                {
+                    case "blue":
+                        this.buttonBlue.BackColor = button.ActiveColor;
+                        this.Refresh();
+                        Thread.Sleep(interval);
+                        this.buttonBlue.BackColor = button.IdleColor;
+                        this.Refresh();
+                        break;
+
+                    case "green":
+                        this.buttonGreen.BackColor = button.ActiveColor;
+                        this.Refresh();
+                        Thread.Sleep(interval);
+                        this.buttonGreen.BackColor = button.IdleColor;
+                        this.Refresh();
+                        break;
+
+                    case "yellow":
+                        this.buttonYellow.BackColor = button.ActiveColor;
+                        this.Refresh();
+                        Thread.Sleep(interval);
+                        this.buttonYellow.BackColor = button.IdleColor;
+                        this.Refresh();
+                        break;
+
+                    case "red":
+                        this.buttonRed.BackColor = button.ActiveColor;
+                        this.Refresh();
+                        Thread.Sleep(interval);
+                        this.buttonRed.BackColor = button.IdleColor;
+                        this.Refresh();
+                        break;
+
+                    default:
+                        break;
+                }
+
+                button.Stop();
+
+                Thread.Sleep(500);
+            }
+
+            //Terminou de exibir a sequência. Habilita botões pro usuário repetir..
+            this.EnableFormButtons();
+        }
+
+        private void DisableFormButtons()
+        {
+            this.buttonBlue.Enabled = false;
+            this.buttonRed.Enabled = false;
+            this.buttonGreen.Enabled = false;
+            this.buttonYellow.Enabled = false;
+        }
+
+        private void EnableFormButtons()
+        {
+            this.buttonBlue.Enabled = true;
+            this.buttonRed.Enabled = true;
+            this.buttonGreen.Enabled = true;
+            this.buttonYellow.Enabled = true;
+        }
+
+        public void ShowGameOver()
+        {
+
+        }
+
+        private void buttonStart_Click(object sender, EventArgs e)
+        {
+            this.gameControl.Start();
         }
     }
 }

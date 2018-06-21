@@ -34,12 +34,13 @@
             this.buttonBlue = new System.Windows.Forms.Button();
             this.panelButtons = new System.Windows.Forms.Panel();
             this.labelScore = new System.Windows.Forms.Label();
+            this.buttonStart = new System.Windows.Forms.Button();
             this.panelButtons.SuspendLayout();
             this.SuspendLayout();
             // 
             // buttonRed
             // 
-            this.buttonRed.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.buttonRed.BackColor = System.Drawing.SystemColors.Control;
             this.buttonRed.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.buttonRed.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonRed.Location = new System.Drawing.Point(3, 315);
@@ -51,7 +52,7 @@
             // 
             // buttonYellow
             // 
-            this.buttonYellow.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.buttonYellow.BackColor = System.Drawing.SystemColors.Control;
             this.buttonYellow.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.buttonYellow.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonYellow.Location = new System.Drawing.Point(325, 0);
@@ -63,7 +64,7 @@
             // 
             // buttonGreen
             // 
-            this.buttonGreen.BackColor = System.Drawing.Color.Green;
+            this.buttonGreen.BackColor = System.Drawing.SystemColors.Control;
             this.buttonGreen.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.buttonGreen.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonGreen.Location = new System.Drawing.Point(3, 0);
@@ -75,7 +76,7 @@
             // 
             // buttonBlue
             // 
-            this.buttonBlue.BackColor = System.Drawing.Color.Navy;
+            this.buttonBlue.BackColor = System.Drawing.SystemColors.Control;
             this.buttonBlue.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.buttonBlue.FlatAppearance.BorderSize = 0;
             this.buttonBlue.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -89,14 +90,16 @@
             // 
             // panelButtons
             // 
+            this.panelButtons.Controls.Add(this.buttonStart);
             this.panelButtons.Controls.Add(this.labelScore);
             this.panelButtons.Controls.Add(this.buttonBlue);
             this.panelButtons.Controls.Add(this.buttonRed);
             this.panelButtons.Controls.Add(this.buttonGreen);
             this.panelButtons.Controls.Add(this.buttonYellow);
-            this.panelButtons.Location = new System.Drawing.Point(35, 26);
+            this.panelButtons.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelButtons.Location = new System.Drawing.Point(0, 0);
             this.panelButtons.Name = "panelButtons";
-            this.panelButtons.Size = new System.Drawing.Size(646, 628);
+            this.panelButtons.Size = new System.Drawing.Size(647, 751);
             this.panelButtons.TabIndex = 5;
             // 
             // labelScore
@@ -111,16 +114,30 @@
             this.labelScore.Text = "0";
             this.labelScore.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // buttonStart
+            // 
+            this.buttonStart.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.buttonStart.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonStart.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonStart.ForeColor = System.Drawing.Color.White;
+            this.buttonStart.Location = new System.Drawing.Point(0, 638);
+            this.buttonStart.Name = "buttonStart";
+            this.buttonStart.Size = new System.Drawing.Size(647, 113);
+            this.buttonStart.TabIndex = 6;
+            this.buttonStart.Text = "Start";
+            this.buttonStart.UseVisualStyleBackColor = true;
+            this.buttonStart.Click += new System.EventHandler(this.buttonStart_Click);
+            // 
             // FormGame
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.ClientSize = new System.Drawing.Size(721, 678);
+            this.ClientSize = new System.Drawing.Size(647, 751);
             this.Controls.Add(this.panelButtons);
             this.Name = "FormGame";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Game";
+            this.ShowIcon = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.panelButtons.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -133,5 +150,6 @@
         private System.Windows.Forms.Button buttonBlue;
         private System.Windows.Forms.Panel panelButtons;
         private System.Windows.Forms.Label labelScore;
+        private System.Windows.Forms.Button buttonStart;
     }
 }

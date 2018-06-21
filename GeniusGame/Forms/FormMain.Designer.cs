@@ -80,7 +80,7 @@
             this.Controls.Add(this.buttonRanking);
             this.Controls.Add(this.buttonNewGame);
             this.Name = "FormMain";
-            this.Text = "Form1";
+            this.ShowIcon = false;
             this.ResumeLayout(false);
 
         }

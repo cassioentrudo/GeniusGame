@@ -81,8 +81,8 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <Compile Include="Sequencia.cs" />
     <Compile Include="Song.cs" />
+    <Compile Include="Type.cs" />
     <EmbeddedResource Include="Forms\FormGame.resx">
       <DependentUpon>FormGame.cs</DependentUpon>
     </EmbeddedResource>

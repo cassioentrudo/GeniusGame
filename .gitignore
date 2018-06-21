@@ -4,3 +4,7 @@
 .vs/GeniusGame/v15/Server/sqlite3/storage.ide
 .vs/GeniusGame/v15/Server/sqlite3/storage.ide-shm
 .vs/GeniusGame/v15/Server/sqlite3/storage.ide-wal
+GeniusGame/obj/x64/Debug/Interop.MediaPlayer.dll
+GeniusGame/obj/x64/Debug/Interop.MediaPlayer.dll
+GeniusGame/obj/x64/Debug/Interop.MediaPlayer.dll
+*.dll
