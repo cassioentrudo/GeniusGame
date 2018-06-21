@@ -6,17 +6,10 @@ namespace GeniusGame
     public class Song
     {
         private WindowsMediaPlayer wplayer = null;
-        private string filePath = string.Empty;
 
         public Song()
         {
             this.wplayer = new WindowsMediaPlayer();
-        }
-
-        public String FilePath
-        {
-            get { return this.filePath; }
-            set { this.filePath = value; }
         }
 
         public void SetVolume(int vol)
@@ -24,9 +17,9 @@ namespace GeniusGame
             this.wplayer.settings.volume = vol;
         }
 
-        public void Play()
+        public void Play(string path)
         {
-            this.wplayer.URL = this.filePath;
+            this.wplayer.URL = path;
             this.wplayer.controls.play();
         }
 

@@ -59,25 +59,25 @@ namespace GeniusGame
             this.blue = new Botao();
             this.blue.SongFilePath = Properties.Settings.Default.BlueButtonSong;
             this.blue.IdleColor = Color.Blue;
-            this.blue.ActiveColor = Color.DeepSkyBlue;
+            this.blue.ActiveColor = Color.LightBlue;
             this.blue.InstanceName = "blue";
 
             this.red = new Botao();
             this.red.SongFilePath = Properties.Settings.Default.RedButtonSong;
             this.red.IdleColor = Color.Red;
-            this.red.ActiveColor = Color.DarkOrange;
+            this.red.ActiveColor = Color.LightSalmon;
             this.red.InstanceName = "red";
 
             this.yellow = new Botao();
             this.yellow.SongFilePath = Properties.Settings.Default.YellowButtonSong;
             this.yellow.IdleColor = Color.Yellow;
-            this.yellow.ActiveColor = Color.LightGoldenrodYellow;
+            this.yellow.ActiveColor = Color.LightYellow;
             this.yellow.InstanceName = "yellow";
 
             this.green = new Botao();
             this.green.SongFilePath = Properties.Settings.Default.GreenButtonSong;
             this.green.IdleColor = Color.Green;
-            this.green.ActiveColor = Color.GreenYellow;
+            this.green.ActiveColor = Color.LightGreen;
             this.green.InstanceName = "green";
 
             this.botoes.Add(this.blue);
@@ -103,15 +103,17 @@ namespace GeniusGame
         private Botao GetRandBotao()
         {
             Random rand = new Random();
-            int tamanhoLista = this.botoes.Count;
 
-            return this.botoes.ElementAt(rand.Next(0, tamanhoLista - 1));
+            return this.botoes.ElementAt(rand.Next(0, botoes.Count - 1));
         }
 
         public void CheckSequence(Botao button)
         {
             if (this.sequence[this.iteratorSequence] != button)
+            {
                 this.GameOver();
+                return;
+            }
 
             this.iteratorSequence++;
 

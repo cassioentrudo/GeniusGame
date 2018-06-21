@@ -3,16 +3,16 @@
   <Profiles />
   <Settings>
     <Setting Name="BlueButtonSong" Type="System.String" Scope="Application">
-      <Value Profile="(Default)">C:\Cassio\TCP\GeniusGame\Songs\Cow Mooing-SoundBible.com-1530217877.mp3</Value>
+      <Value Profile="(Default)">C:\Cassio\TCP\GeniusGame\Songs\Cow Mooing-SoundBible.com-1530217877.wav</Value>
     </Setting>
     <Setting Name="RedButtonSong" Type="System.String" Scope="Application">
-      <Value Profile="(Default)">C:\Cassio\TCP\GeniusGame\Songs\Elephant Calls-SoundBible.com-480825513.mp3</Value>
+      <Value Profile="(Default)">C:\Cassio\TCP\GeniusGame\Songs\Elephant Calls-SoundBible.com-480825513.wav</Value>
     </Setting>
     <Setting Name="YellowButtonSong" Type="System.String" Scope="Application">
-      <Value Profile="(Default)">C:\Cassio\TCP\GeniusGame\Songs\Monkeys Monkeying Around-SoundBible.com-1738007729.mp3</Value>
+      <Value Profile="(Default)">C:\Cassio\TCP\GeniusGame\Songs\Monkeys Monkeying Around-SoundBible.com-1738007729.wav</Value>
     </Setting>
     <Setting Name="GreenButtonSong" Type="System.String" Scope="Application">
-      <Value Profile="(Default)">C:\Cassio\TCP\GeniusGame\Songs\Rooster-SoundBible.com-1114473528.mp3</Value>
+      <Value Profile="(Default)">C:\Cassio\TCP\GeniusGame\Songs\Rooster-SoundBible.com-1114473528.wav</Value>
     </Setting>
   </Settings>
 </SettingsFile>

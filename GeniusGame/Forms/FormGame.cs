@@ -9,6 +9,8 @@ namespace GeniusGame
     {
         private GameControl gameControl = null;
 
+        private Song song = null;
+
         private const int interval = 1000;
 
         public FormGame()
@@ -16,8 +18,10 @@ namespace GeniusGame
             InitializeComponent();
 
             this.gameControl = new GameControl(this);
+            this.song = new Song();
 
             this.StartFormObjects();
+            this.DisableFormButtons();
         }
 
         /// <summary>
@@ -33,25 +37,25 @@ namespace GeniusGame
 
         private void buttonGreen_Click(object sender, EventArgs e)
         {
-            this.gameControl.Green.Play();
+            this.ExecuteButton(this.buttonGreen, this.gameControl.Green, 0);
             this.gameControl.CheckSequence(this.gameControl.Green);
         }
 
         private void buttonYellow_Click(object sender, EventArgs e)
         {
-            this.gameControl.Yellow.Play();
+            this.ExecuteButton(this.buttonYellow, this.gameControl.Yellow, 0);
             this.gameControl.CheckSequence(this.gameControl.Yellow);
         }
 
         private void buttonBlue_Click(object sender, EventArgs e)
         {
-            this.gameControl.Blue.Play();
+            this.ExecuteButton(this.buttonBlue, this.gameControl.Blue, 0);
             this.gameControl.CheckSequence(this.gameControl.Blue);
         }
 
         private void buttonRed_Click(object sender, EventArgs e)
         {
-            this.gameControl.Red.Play();
+            this.ExecuteButton(this.buttonRed, this.gameControl.Red, 0);
             this.gameControl.CheckSequence(this.gameControl.Red);
         }
 
@@ -67,53 +71,39 @@ namespace GeniusGame
 
             foreach (var button in buttons)
             {
-                button.Play();
-
                 switch (button.InstanceName)
                 {
                     case "blue":
-                        this.buttonBlue.BackColor = button.ActiveColor;
-                        this.Refresh();
-                        Thread.Sleep(interval);
-                        this.buttonBlue.BackColor = button.IdleColor;
-                        this.Refresh();
+                        ExecuteButton(this.buttonBlue, button, interval);
                         break;
 
                     case "green":
-                        this.buttonGreen.BackColor = button.ActiveColor;
-                        this.Refresh();
-                        Thread.Sleep(interval);
-                        this.buttonGreen.BackColor = button.IdleColor;
-                        this.Refresh();
+                        ExecuteButton(this.buttonGreen, button, interval);
                         break;
 
                     case "yellow":
-                        this.buttonYellow.BackColor = button.ActiveColor;
-                        this.Refresh();
-                        Thread.Sleep(interval);
-                        this.buttonYellow.BackColor = button.IdleColor;
-                        this.Refresh();
+                        ExecuteButton(this.buttonYellow, button, interval);
                         break;
 
                     case "red":
-                        this.buttonRed.BackColor = button.ActiveColor;
-                        this.Refresh();
-                        Thread.Sleep(interval);
-                        this.buttonRed.BackColor = button.IdleColor;
-                        this.Refresh();
-                        break;
-
-                    default:
+                        ExecuteButton(this.buttonRed, button, interval);
                         break;
                 }
-
-                button.Stop();
-
-                Thread.Sleep(500);
             }
 
             //Terminou de exibir a sequência. Habilita botões pro usuário repetir..
             this.EnableFormButtons();
+        }
+
+        private void ExecuteButton(Button FormButton, Botao button, int time)
+        {
+            this.song.Play(button.SongFilePath);
+            FormButton.BackColor = button.ActiveColor;
+            this.Refresh();
+            Thread.Sleep(time);
+            this.song.Stop();
+            FormButton.BackColor = button.IdleColor;
+            this.Refresh();
         }
 
         private void DisableFormButtons()
@@ -134,12 +124,19 @@ namespace GeniusGame
 
         public void ShowGameOver()
         {
-
+            MessageBox.Show("Game Over", "Game Over", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            this.Close();
         }
 
         private void buttonStart_Click(object sender, EventArgs e)
         {
             this.gameControl.Start();
+        }
+
+        private void buttonConfiguration_Click(object sender, EventArgs e)
+        {
+            FormConfiguration formConfig = new FormConfiguration();
+            formConfig.ShowDialog();
         }
     }
 }

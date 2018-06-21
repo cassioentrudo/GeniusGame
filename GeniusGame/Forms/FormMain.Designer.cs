@@ -30,7 +30,6 @@
         {
             this.buttonNewGame = new System.Windows.Forms.Button();
             this.buttonRanking = new System.Windows.Forms.Button();
-            this.buttonConfig = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // buttonNewGame
@@ -58,25 +57,12 @@
             this.buttonRanking.Text = "Ranking";
             this.buttonRanking.UseVisualStyleBackColor = true;
             // 
-            // buttonConfig
-            // 
-            this.buttonConfig.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonConfig.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonConfig.ForeColor = System.Drawing.Color.White;
-            this.buttonConfig.Location = new System.Drawing.Point(71, 267);
-            this.buttonConfig.Name = "buttonConfig";
-            this.buttonConfig.Size = new System.Drawing.Size(336, 113);
-            this.buttonConfig.TabIndex = 2;
-            this.buttonConfig.Text = "Configurações";
-            this.buttonConfig.UseVisualStyleBackColor = true;
-            // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
-            this.ClientSize = new System.Drawing.Size(485, 412);
-            this.Controls.Add(this.buttonConfig);
+            this.ClientSize = new System.Drawing.Size(485, 291);
             this.Controls.Add(this.buttonRanking);
             this.Controls.Add(this.buttonNewGame);
             this.Name = "FormMain";
@@ -89,7 +75,6 @@
 
         private System.Windows.Forms.Button buttonNewGame;
         private System.Windows.Forms.Button buttonRanking;
-        private System.Windows.Forms.Button buttonConfig;
     }
 }
 

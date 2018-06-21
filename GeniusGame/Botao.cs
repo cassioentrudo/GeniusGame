@@ -66,16 +66,5 @@ namespace GeniusGame
         }
 
         #endregion
-
-        public void Play()
-        {
-            this.song.FilePath = this.songFilePath;
-            this.song.Play();
-        }
-
-        public void Stop()
-        {
-            this.song.Stop();
-        }
     }
 }

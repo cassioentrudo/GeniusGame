@@ -25,7 +25,7 @@ namespace GeniusGame.Properties {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("C:\\Cassio\\TCP\\GeniusGame\\Songs\\Cow Mooing-SoundBible.com-1530217877.mp3")]
+        [global::System.Configuration.DefaultSettingValueAttribute("C:\\Cassio\\TCP\\GeniusGame\\Songs\\Cow Mooing-SoundBible.com-1530217877.wav")]
         public string BlueButtonSong {
             get {
                 return ((string)(this["BlueButtonSong"]));
@@ -34,7 +34,7 @@ namespace GeniusGame.Properties {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("C:\\Cassio\\TCP\\GeniusGame\\Songs\\Elephant Calls-SoundBible.com-480825513.mp3")]
+        [global::System.Configuration.DefaultSettingValueAttribute("C:\\Cassio\\TCP\\GeniusGame\\Songs\\Elephant Calls-SoundBible.com-480825513.wav")]
         public string RedButtonSong {
             get {
                 return ((string)(this["RedButtonSong"]));
@@ -44,7 +44,7 @@ namespace GeniusGame.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("C:\\Cassio\\TCP\\GeniusGame\\Songs\\Monkeys Monkeying Around-SoundBible.com-1738007729" +
-            ".mp3")]
+            ".wav")]
         public string YellowButtonSong {
             get {
                 return ((string)(this["YellowButtonSong"]));
@@ -53,7 +53,7 @@ namespace GeniusGame.Properties {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("C:\\Cassio\\TCP\\GeniusGame\\Songs\\Rooster-SoundBible.com-1114473528.mp3")]
+        [global::System.Configuration.DefaultSettingValueAttribute("C:\\Cassio\\TCP\\GeniusGame\\Songs\\Rooster-SoundBible.com-1114473528.wav")]
         public string GreenButtonSong {
             get {
                 return ((string)(this["GreenButtonSong"]));
