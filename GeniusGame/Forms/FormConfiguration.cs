@@ -34,6 +34,12 @@ namespace GeniusGame
             set { this.greenButtonSongPath = value; }
         }
 
+        public bool Mute
+        {
+            get { return this.mute; }
+            set { this.mute = value; }
+        }
+
         public FormConfiguration()
         {
             InitializeComponent();
@@ -106,6 +112,11 @@ namespace GeniusGame
             this.textBoxGreenPathSong.Text = this.greenButtonSongPath;
             this.textBoxRedPathSong.Text = this.redButtonSongPath;
             this.textBoxYellowPathSong.Text = this.yellowButtonSongPath;
+        }
+
+        private void checkBoxMute_CheckedChanged(object sender, System.EventArgs e)
+        {
+            this.mute = this.checkBoxMute.Checked;
         }
     }
 }

@@ -173,6 +173,7 @@
             this.checkBoxMute.TabIndex = 9;
             this.checkBoxMute.Text = "Mute";
             this.checkBoxMute.UseVisualStyleBackColor = true;
+            this.checkBoxMute.CheckedChanged += new System.EventHandler(this.checkBoxMute_CheckedChanged);
             // 
             // buttonOk
             // 

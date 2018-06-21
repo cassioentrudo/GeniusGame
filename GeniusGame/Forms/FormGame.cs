@@ -135,13 +135,21 @@ namespace GeniusGame
 
         private void buttonStart_Click(object sender, EventArgs e)
         {
+            this.UpdateConfigurations();
+            this.gameControl.Start();
+        }
+
+        private void UpdateConfigurations()
+        {
             string blueSongPath = this.formConfig.BlueButtonSongPath;
             string redSongPath = this.formConfig.RedButtonSongPath;
             string greenSongPath = this.formConfig.GreenButtonSongPath;
             string yellowSongPath = this.formConfig.YellowButtonSongPath;
+            bool mute = this.formConfig.Mute;
+
+            this.song.Mute(mute);
 
             this.gameControl.Prepare(blueSongPath, redSongPath, greenSongPath, yellowSongPath);
-            this.gameControl.Start();
         }
 
         private void buttonConfiguration_Click(object sender, EventArgs e)
@@ -150,7 +158,7 @@ namespace GeniusGame
 
             if (result == DialogResult.OK)
             {
-                
+                this.UpdateConfigurations();
             }
         }
 
