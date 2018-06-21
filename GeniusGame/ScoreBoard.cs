@@ -9,7 +9,7 @@ namespace GeniusGame
     {
         private static string BoardPath = "..\\..\\..\\ScoreBoard\\data\\ScoreBoard.txt";
 
-        private static void InsereNoBoard(Player player)
+        public static void InsereNoBoard(Player player)
         {
             List<Player> newBoard = UpdateBoardList(player);
 
@@ -31,7 +31,7 @@ namespace GeniusGame
             return newBoard;
         }
 
-        private static bool TestaScoreSuficiente(int scoreFeito)
+        public static bool TestaScoreSuficiente(int scoreFeito)
         {
             return (GetScorePosicaoN(10) < scoreFeito);
         }
@@ -42,7 +42,7 @@ namespace GeniusGame
             return board.ElementAt(n - 1).Score;
         }
 
-        private static List<Player> GetScoreBoard()
+        public static List<Player> GetScoreBoard()
         {
 
             if (!File.Exists(BoardPath))
