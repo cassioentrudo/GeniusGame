@@ -127,12 +127,6 @@ namespace GeniusGame
             this.buttonYellow.Enabled = true;
         }
 
-        public void ShowGameOver()
-        {
-            MessageBox.Show("Game Over", "Game Over", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            this.Close();
-        }
-
         private void buttonStart_Click(object sender, EventArgs e)
         {
             this.UpdateConfigurations();

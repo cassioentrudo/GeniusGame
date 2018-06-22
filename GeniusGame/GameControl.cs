@@ -135,7 +135,7 @@ namespace GeniusGame
             Player player = new Player();
             player.Score = this.score;
 
-            this.formGame.ShowGameOver();
+            this.formGame.Close();
 
             if (ScoreBoard.TestaScoreSuficiente(score))
             {
@@ -143,7 +143,7 @@ namespace GeniusGame
                 FormGameOver formGameOver = new FormGameOver();
                 formGameOver.PlayerScore = this.score.ToString();
 
-                DialogResult res = formGame.ShowDialog();
+                DialogResult res = formGameOver.ShowDialog();
 
                 if (res == DialogResult.OK)
                 {                    
