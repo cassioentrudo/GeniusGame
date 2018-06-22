@@ -81,7 +81,6 @@
       <DependentUpon>FormGameOver.cs</DependentUpon>
     </Compile>
     <Compile Include="GameControl.cs" />
-    <Compile Include="PersistenceFile.cs" />
     <Compile Include="Player.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -92,7 +91,6 @@
     </Compile>
     <Compile Include="ScoreBoard.cs" />
     <Compile Include="Song.cs" />
-    <Compile Include="Type.cs" />
     <EmbeddedResource Include="Forms\FormConfiguration.resx">
       <DependentUpon>FormConfiguration.cs</DependentUpon>
     </EmbeddedResource>
