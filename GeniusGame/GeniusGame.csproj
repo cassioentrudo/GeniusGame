@@ -78,6 +78,12 @@
     <Compile Include="Forms\FormScoreBoard.Designer.cs">
       <DependentUpon>FormScoreBoard.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\FormGameOver.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormGameOver.Designer.cs">
+      <DependentUpon>FormGameOver.cs</DependentUpon>
+    </Compile>
     <Compile Include="GameControl.cs" />
     <Compile Include="PersistenceFile.cs" />
     <Compile Include="Player.cs" />
@@ -96,6 +102,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FormGame.resx">
       <DependentUpon>FormGame.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormGameOver.resx">
+      <DependentUpon>FormGameOver.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FormMain.resx">
       <DependentUpon>FormMain.cs</DependentUpon>

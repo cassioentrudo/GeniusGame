@@ -9,6 +9,9 @@ namespace GeniusGame
         public FormMain()
         {
             InitializeComponent();
+            FormGameOver gameover = new FormGameOver();
+            gameover.ShowDialog();
+
         }
 
         private void buttonNewGame_Click(object sender, EventArgs e)

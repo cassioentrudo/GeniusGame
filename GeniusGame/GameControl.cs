@@ -130,8 +130,16 @@ namespace GeniusGame
 
         private void GameOver()
         {
-            this.score = 0;
+           
             this.formGame.ShowGameOver();
+            if (ScoreBoard.TestaScoreSuficiente(score))
+            { //chamar o form do game over
+                //cria um player com o nome inserido e o score obitido
+              //ScoreBoard.InsereNoBoard(player);
+              //ou faz isso no form mesmo
+            }
+            this.score = 0;
+
         }
     }
 }
