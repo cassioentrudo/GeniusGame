@@ -105,8 +105,9 @@
             this.panelButtonsGame.Controls.Add(this.buttonBlue);
             this.panelButtonsGame.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelButtonsGame.Location = new System.Drawing.Point(0, 0);
+            this.panelButtonsGame.MinimumSize = new System.Drawing.Size(521, 620);
             this.panelButtonsGame.Name = "panelButtonsGame";
-            this.panelButtonsGame.Size = new System.Drawing.Size(521, 495);
+            this.panelButtonsGame.Size = new System.Drawing.Size(521, 620);
             this.panelButtonsGame.TabIndex = 5;
             // 
             // labelScore
@@ -128,16 +129,16 @@
             this.panelButtonsControl.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelButtonsControl.Location = new System.Drawing.Point(0, 0);
             this.panelButtonsControl.Name = "panelButtonsControl";
-            this.panelButtonsControl.Size = new System.Drawing.Size(521, 352);
+            this.panelButtonsControl.Size = new System.Drawing.Size(521, 272);
             this.panelButtonsControl.TabIndex = 8;
             // 
             // buttonStart
             // 
-            this.buttonStart.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.buttonStart.Dock = System.Windows.Forms.DockStyle.Top;
             this.buttonStart.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonStart.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonStart.ForeColor = System.Drawing.Color.White;
-            this.buttonStart.Location = new System.Drawing.Point(0, 126);
+            this.buttonStart.Location = new System.Drawing.Point(0, 0);
             this.buttonStart.Name = "buttonStart";
             this.buttonStart.Size = new System.Drawing.Size(521, 113);
             this.buttonStart.TabIndex = 6;
@@ -151,7 +152,7 @@
             this.buttonConfiguration.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonConfiguration.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonConfiguration.ForeColor = System.Drawing.Color.White;
-            this.buttonConfiguration.Location = new System.Drawing.Point(0, 239);
+            this.buttonConfiguration.Location = new System.Drawing.Point(0, 159);
             this.buttonConfiguration.Name = "buttonConfiguration";
             this.buttonConfiguration.Size = new System.Drawing.Size(521, 113);
             this.buttonConfiguration.TabIndex = 7;
@@ -173,8 +174,9 @@
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.Controls.Add(this.panelButtonsControl);
-            this.splitContainer1.Size = new System.Drawing.Size(521, 851);
-            this.splitContainer1.SplitterDistance = 495;
+            this.splitContainer1.Panel2MinSize = 50;
+            this.splitContainer1.Size = new System.Drawing.Size(521, 877);
+            this.splitContainer1.SplitterDistance = 601;
             this.splitContainer1.TabIndex = 6;
             // 
             // FormGame
@@ -182,11 +184,11 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.ClientSize = new System.Drawing.Size(521, 851);
+            this.ClientSize = new System.Drawing.Size(521, 877);
             this.Controls.Add(this.splitContainer1);
             this.Name = "FormGame";
             this.ShowIcon = false;
-            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.panelButtonsGame.ResumeLayout(false);
             this.panelButtonsControl.ResumeLayout(false);
             this.splitContainer1.Panel1.ResumeLayout(false);
