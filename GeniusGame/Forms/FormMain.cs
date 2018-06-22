@@ -1,4 +1,5 @@
-﻿using System;
+﻿using GeniusGame.Forms;
+using System;
 using System.Windows.Forms;
 
 namespace GeniusGame
@@ -14,6 +15,12 @@ namespace GeniusGame
         {
             FormGame game = new FormGame();
             game.ShowDialog();
+        }
+
+        private void buttonRanking_Click(object sender, EventArgs e)
+        {
+            FormScoreBoard ranking = new FormScoreBoard();
+            ranking.ShowDialog();
         }
     }
 }

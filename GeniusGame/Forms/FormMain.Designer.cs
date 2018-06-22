@@ -37,9 +37,10 @@
             this.buttonNewGame.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonNewGame.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonNewGame.ForeColor = System.Drawing.Color.White;
-            this.buttonNewGame.Location = new System.Drawing.Point(71, 29);
+            this.buttonNewGame.Location = new System.Drawing.Point(47, 19);
+            this.buttonNewGame.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.buttonNewGame.Name = "buttonNewGame";
-            this.buttonNewGame.Size = new System.Drawing.Size(336, 113);
+            this.buttonNewGame.Size = new System.Drawing.Size(224, 73);
             this.buttonNewGame.TabIndex = 0;
             this.buttonNewGame.Text = "Novo jogo";
             this.buttonNewGame.UseVisualStyleBackColor = true;
@@ -50,21 +51,24 @@
             this.buttonRanking.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonRanking.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonRanking.ForeColor = System.Drawing.Color.White;
-            this.buttonRanking.Location = new System.Drawing.Point(71, 148);
+            this.buttonRanking.Location = new System.Drawing.Point(47, 96);
+            this.buttonRanking.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.buttonRanking.Name = "buttonRanking";
-            this.buttonRanking.Size = new System.Drawing.Size(336, 113);
+            this.buttonRanking.Size = new System.Drawing.Size(224, 73);
             this.buttonRanking.TabIndex = 1;
             this.buttonRanking.Text = "Ranking";
             this.buttonRanking.UseVisualStyleBackColor = true;
+            this.buttonRanking.Click += new System.EventHandler(this.buttonRanking_Click);
             // 
             // FormMain
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
-            this.ClientSize = new System.Drawing.Size(485, 291);
+            this.ClientSize = new System.Drawing.Size(323, 189);
             this.Controls.Add(this.buttonRanking);
             this.Controls.Add(this.buttonNewGame);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "FormMain";
             this.ShowIcon = false;
             this.ResumeLayout(false);

@@ -7,7 +7,7 @@ namespace GeniusGame
 {
     public class ScoreBoard
     {
-        private static string BoardPath = "..\\..\\..\\ScoreBoard\\data\\ScoreBoard.txt";
+        private static string BoardPath = "..\\..\\..\\data\\ScoreBoard.txt";
 
         public static void InsereNoBoard(Player player)
         {
