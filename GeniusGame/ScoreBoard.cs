@@ -44,7 +44,6 @@ namespace GeniusGame
 
         public static List<Player> GetScoreBoard()
         {
-
             if (!File.Exists(BoardPath))
                 CriaNovoBoard();
 

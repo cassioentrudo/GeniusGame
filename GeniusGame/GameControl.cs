@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
+using System.Windows.Forms;
+using GeniusGame.Forms;
 
 namespace GeniusGame
 {
@@ -130,16 +132,30 @@ namespace GeniusGame
 
         private void GameOver()
         {
-           
-            this.formGame.ShowGameOver();
-            if (ScoreBoard.TestaScoreSuficiente(score))
-            { //chamar o form do game over
-                //cria um player com o nome inserido e o score obitido
-              //ScoreBoard.InsereNoBoard(player);
-              //ou faz isso no form mesmo
-            }
-            this.score = 0;
+            Player player = new Player();
+            player.Score = this.score;
 
+            this.formGame.ShowGameOver();
+
+            if (ScoreBoard.TestaScoreSuficiente(score))
+            {
+                //chamar o form do game over
+                FormGameOver formGameOver = new FormGameOver();
+                formGameOver.PlayerScore = this.score.ToString();
+
+                DialogResult res = formGame.ShowDialog();
+
+                if (res == DialogResult.OK)
+                {                    
+                    player.Nome = formGameOver.PlayerName;
+                }               
+                
+                //cria um player com o nome inserido e o score obitido
+                ScoreBoard.InsereNoBoard(player);
+                //ou faz isso no form mesmo
+            }
+
+            this.score = 0;
         }
     }
 }
